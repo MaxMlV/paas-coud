@@ -77,7 +77,7 @@ def create_site():
                 project_name=current_app.config["PROJECT_NAME"],
                 program=pulumi_program,
             )
-            stack.set_config("aws:region", auto.ConfigValue("us-east-1"))
+            stack.set_config("aws:region", auto.ConfigValue("eu-central-1"))
             # deploy the stack, tailing the logs to stdout
             stack.up(on_output=print)
             flash(
@@ -146,7 +146,7 @@ def update_site(id: str):
                 project_name=current_app.config["PROJECT_NAME"],
                 program=pulumi_program,
             )
-            stack.set_config("aws:region", auto.ConfigValue("us-east-1"))
+            stack.set_config("aws:region", auto.ConfigValue("eu-central-1"))
             # deploy the stack, tailing the logs to stdout
             stack.up(on_output=print)
             flash(f"Site '{stack_name}' successfully updated!",

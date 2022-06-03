@@ -1,0 +1,6 @@
+name: paas-cloud
+runtime:
+  name: python
+  options:
+    virtualenv: venv
+description: Platform for provisioning infrastructure
